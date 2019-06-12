@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/work_box"
+        android:enabled="true"
+        android:icon="@mipmap/main_page_table_work_box_normal"
+        android:title="工具箱"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/table_travelassistant"
+        android:enabled="true"
+        android:icon="@mipmap/main_page_table_travelassistant_normal"
+        android:title="行程助手"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/table_find"
+        android:enabled="true"
+        android:icon="@mipmap/main_page_table_find_normal"
+        android:title="游记"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/table_myself"
+        android:enabled="true"
+        android:icon="@mipmap/main_page_table_myself_normal"
+        android:title="我的"
+        app:showAsAction="ifRoom" />
+
+</menu>

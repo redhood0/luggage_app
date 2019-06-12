@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F8F8F8</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="textcolor1">#4C4C4C</color>
+    <color name="textcolor2">#525252</color>
+    <color name="white">#ffffff</color>
+    <color name="person_page_select_gray">#dddddd</color>
+    <color name="person_page_green">#A5D8C9</color>
+    <color name="person_page_green_solid">#78C4AF</color>
+    <color name="person_page_border_gray">#EFEFEF</color>
+
+</resources>

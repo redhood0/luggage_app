@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@mipmap/main_page_top_day_bg">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/main_page_top_set"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/flayout_left"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@mipmap/main_page_clockview_bg"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></FrameLayout>
+
+        <!--<FrameLayout-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--app:layout_constraintLeft_toRighttOf="@+id/flayout_left"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--android:background="@mipmap/main_page_clockview_bg">-->
+        <!--</FrameLayout>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_left"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintLeft_toLeftOf="@+id/flayout_left"-->
+        <!--app:layout_constraintRight_toRightOf="@+id/flayout_left"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/flayout_left"-->
+        <!--android:textColor="#525252"-->
+        <!--android:textSize="30sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:text="成都"-->
+        <!--/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintLeft_toLeftOf="@+id/flayout_left"-->
+        <!--app:layout_constraintRight_toRightOf="@+id/flayout_left"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tv_left"-->
+        <!--android:textColor="#8B8B8B"-->
+        <!--android:textSize="12sp"-->
+        <!--android:text="6月11日 11:34"-->
+        <!--/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#ADADAD"
+
+        android:columnCount="3"
+        android:orientation="horizontal"
+
+        android:rowCount="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:src="@drawable/main_page_griditem_weather_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="行程天气" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:src="@drawable/main_page_griditem_translate_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="实时翻译" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="0.5dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:src="@drawable/main_page_griditem_native_travel_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="国内景点" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:src="@drawable/main_page_griditem_money_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="记账本" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:src="@drawable/main_page_griditem_rate_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="汇率换算" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="0.5dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:src="@drawable/main_page_griditem_safe_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="旅游保险" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="0.5dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:src="@drawable/main_page_griditem_news_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="旅游资讯" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="0.5dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:src="@drawable/main_page_griditem_help_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="紧急救援" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:src="@drawable/main_page_griditem_strategy_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="出国攻略" />
+        </LinearLayout>
+    </GridLayout>
+</LinearLayout>

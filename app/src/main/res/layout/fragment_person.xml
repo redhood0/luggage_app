@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/person_page_border_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_titlebar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@mipmap/login_page_fragment_center_top">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="20dp"
+                        android:clickable="true"
+                        android:text="登陆"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_regist"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_regist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="150dp"
+                        android:clickable="true"
+                        android:text="注册"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="20dp"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_login"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:clickable="true"
+                        android:text="欢迎使用「旅行箱」"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_underline" />
+
+                    <ImageView
+                        android:id="@+id/iv_underline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:src="@mipmap/login_page_fragment_center_line"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_login"
+                        app:layout_constraintRight_toRightOf="@+id/tv_login"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+                    <ImageView
+                        android:id="@+id/tv_welcomword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:src="@mipmap/login_page_fragment_center_line"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_regist"
+                        app:layout_constraintRight_toRightOf="@+id/tv_regist"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_regist" />
+
+                    <View
+                        android:id="@+id/view_gray_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="#44000000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"></View>
+
+                    <ImageView
+                        android:id="@+id/iv_foot_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/foot_icon"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_foot_icon"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/view_gray_line1"
+                        app:layout_constraintTop_toTopOf="@+id/view_gray_bg" />
+
+                    <TextView
+                        android:id="@+id/tv_foot_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="游记"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@+id/iv_foot_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_foot_icon" />
+
+                    <View
+                        android:id="@+id/view_gray_line1"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="#66f5f5f5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_foot_icon"
+                        app:layout_constraintRight_toLeftOf="@+id/iv_bill_icon"
+                        app:layout_constraintTop_toTopOf="@+id/view_gray_bg"></View>
+
+                    <ImageView
+                        android:id="@+id/iv_bill_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/bill_icon"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_bill_icon"
+                        app:layout_constraintLeft_toRightOf="@+id/view_gray_line1"
+                        app:layout_constraintRight_toLeftOf="@+id/view_gray_line2"
+                        app:layout_constraintTop_toTopOf="@+id/view_gray_bg" />
+
+                    <TextView
+                        android:id="@+id/tv_bill_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="账单"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@+id/iv_bill_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_bill_icon" />
+
+                    <View
+                        android:id="@+id/view_gray_line2"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="#66f5f5f5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_bill_icon"
+                        app:layout_constraintRight_toLeftOf="@+id/iv_collect_icon"
+                        app:layout_constraintTop_toTopOf="@+id/view_gray_bg"></View>
+
+                    <ImageView
+                        android:id="@+id/iv_collect_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/collect_icon"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_collect_icon"
+                        app:layout_constraintLeft_toRightOf="@+id/view_gray_line2"
+                        app:layout_constraintRight_toLeftOf="@+id/view_gray_line3"
+                        app:layout_constraintTop_toTopOf="@+id/view_gray_bg" />
+
+                    <TextView
+                        android:id="@+id/tv_collect_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收藏"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@+id/iv_collect_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_collect_icon" />
+
+                    <View
+                        android:id="@+id/view_gray_line3"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="#66f5f5f5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_collect_icon"
+                        app:layout_constraintRight_toLeftOf="@+id/iv_favor_icon"
+                        app:layout_constraintTop_toTopOf="@+id/view_gray_bg"></View>
+
+                    <ImageView
+                        android:id="@+id/iv_favor_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/favor_icon"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_favor_icon"
+                        app:layout_constraintLeft_toRightOf="@+id/view_gray_line3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/view_gray_bg" />
+
+                    <TextView
+                        android:id="@+id/tv_favor_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收藏"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@+id/iv_favor_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_favor_icon" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/person_page_select_gray"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="保险订单"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-20dp"
+                    android:src="@mipmap/insurance_webview_go_foward"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_notebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="记事本"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/textview_border"
+                    android:text="已同步"
+                    android:textColor="@color/person_page_green"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_notebook"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_notebook"
+                    app:layout_constraintTop_toTopOf="@+id/tv_notebook" />
+
+                <TextView
+                    android:id="@+id/synchronous_btn4notebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/textview_stoke"
+                    android:text="同步"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_notebook" />
+
+                <TextView
+                    android:id="@+id/tv_toexcel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/textview_stoke"
+                    android:text="导出Excel"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/synchronous_btn4notebook" />
+
+                <View
+                    android:id="@+id/view_personpag_gray_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/person_page_border_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_toexcel_btn"></View>
+
+                <TextView
+                    android:id="@+id/tv_travel_bill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:text="行程账单"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view_personpag_gray_line1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/textview_border"
+                    android:text="已同步"
+                    android:textColor="@color/person_page_green"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_travel_bill"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_travel_bill"
+                    app:layout_constraintTop_toTopOf="@+id/tv_travel_bill" />
+
+                <TextView
+                    android:id="@+id/synchronous_btn4travel_bill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/textview_stoke"
+                    android:text="同步"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toTopOf="@+id/view_personpag_gray_line2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view_personpag_gray_line1" />
+
+                <View
+                    android:id="@+id/view_personpag_gray_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/person_page_border_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_travel_bill"></View>
+
+                <TextView
+                    android:id="@+id/tv_travel_assistant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:text="行程助手"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view_personpag_gray_line2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/textview_border"
+                    android:text="已同步"
+                    android:textColor="@color/person_page_green"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_travel_assistant"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_travel_assistant"
+                    app:layout_constraintTop_toTopOf="@+id/tv_travel_assistant" />
+
+                <TextView
+                    android:id="@+id/synchronous_btn4travel_assistant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/textview_stoke"
+                    android:text="同步"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toTopOf="@+id/view_personpag_gray_line3"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view_personpag_gray_line2" />
+
+                <View
+                    android:id="@+id/view_personpag_gray_line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/person_page_border_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_travel_assistant"></View>
+
+                <TextView
+                    android:id="@+id/synchronous_btn4all_synchronous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/textview_stoke"
+                    android:text="     全部同步     "
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view_personpag_gray_line3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/person_page_select_gray"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="使用帮助"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-20dp"
+                    android:src="@mipmap/insurance_webview_go_foward"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
